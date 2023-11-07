@@ -1,0 +1,62 @@
+Theme Parks Wiki V1 API
+https://api.themeparks.wiki/docs/v1/
+
+Resumen funcional:
+
+La Theme Parks Wiki V1 API es una API que proporciona información sobre parques temáticos y destinos turísticos. Aquí se presenta una descripción detallada de las rutas disponibles y los esquemas de datos asociados:
+
+**Version:** 1.0.0-alpha
+**Documentación:** [Enlace a la documentación](https://api.themeparks.wiki/docs/v1.yaml)
+**Servidor:** [https://api.themeparks.wiki/v1](https://api.themeparks.wiki/v1) - Servidor de la API
+
+**Rutas disponibles:**
+
+1. **GET /destinations:**
+   - Descripción: Obtiene una lista de destinos admitidos disponibles en la API en vivo.
+   - Respuesta: DestinationsResponse que incluye una lista de destinos.
+
+2. **GET /entity/{entityID}:**
+   - Descripción: Obtiene un documento de entidad específico identificado por su "entityID".
+   - Respuesta: EntityData que proporciona información detallada sobre una entidad, como un parque temático o una atracción.
+
+3. **GET /entity/{entityID}/children:**
+   - Descripción: Obtiene todos los hijos de una entidad dada, lo que podría incluir información sobre atracciones dentro de un parque temático u otras estructuras jerárquicas.
+   - Respuesta: EntityChildrenResponse que incluye detalles de los hijos de la entidad.
+
+4. **GET /entity/{entityID}/live:**
+   - Descripción: Obtiene datos en tiempo real para una entidad específica y sus entidades secundarias.
+   - Respuesta: EntityLiveDataResponse que proporciona datos en tiempo real, como el estado, los tiempos de espera y más.
+
+5. **GET /entity/{entityID}/schedule:**
+   - Descripción: Obtiene el horario de una entidad, como un parque temático.
+   - Respuesta: EntityScheduleResponse que contiene detalles sobre el horario de la entidad.
+
+6. **GET /entity/{entityID}/schedule/{year}/{month}:**
+   - Descripción: Obtiene el horario de una entidad para un mes y año específicos.
+   - Respuesta: EntityScheduleResponse con detalles del horario del mes y año especificados.
+
+**Esquemas de datos (Schemas):**
+
+La API define varios esquemas de datos que se utilizan para estructurar la información devuelta. Aquí hay ejemplos de algunos de estos esquemas:
+
+- EntityType: Define el tipo de entidad.
+- LiveStatusType: Describe el estado en tiempo real.
+- ReturnTimeState: Define el estado de retorno.
+- BoardingGroupState: Define el estado del grupo de abordaje.
+- PriceData: Contiene información sobre precios.
+- LiveQueue: Proporciona detalles sobre las colas en tiempo real.
+- LiveShowTime: Contiene información sobre los horarios de espectáculos en vivo.
+- DiningAvailability: Ofrece detalles sobre la disponibilidad de restaurantes.
+- TagData: Define etiquetas para datos.
+- EntityData: Contiene detalles de una entidad.
+- EntityChild: Describe una entidad secundaria.
+- EntityChildrenResponse: Contiene información sobre las entidades secundarias de una entidad.
+- EntityLiveData: Proporciona datos en tiempo real sobre una entidad.
+- EntityLiveDataResponse: Contiene información sobre datos en tiempo real de una entidad.
+- ScheduleEntry: Describe una entrada de horario.
+- EntityScheduleResponse: Proporciona detalles sobre el horario de una entidad.
+- DestinationParkEntry: Describe una entrada de parque de destino.
+- DestinationEntry: Contiene información sobre un destino.
+- DestinationsResponse: Proporciona una lista de destinos.
+
+ Theme Parks Wiki V1 API es una fuente de información valiosa para desarrolladores que deseen acceder a datos relacionados con parques temáticos y destinos turísticos. Los esquemas de datos proporcionan una estructura organizada para los datos devueltos por la API.
